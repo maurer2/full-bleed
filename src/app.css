@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@property --full-bleed-test1 {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: true;
+}
+
 @theme {
   --color-brand: oklch(0.75 0.175 50);
   --color-brand-complementary: lch(from var(--color-brand) l c calc(h + 180));
@@ -12,7 +18,35 @@
   --spacing-content: min(100%, 1280px);
 }
 
+@layer base {
+  html {
+    container-type: inline-size;
+  }
+}
+
+/* https://master.dev/blog/using-container-query-units-relative-to-an-outer-container/ */
 @layer components {
+  .test {
+    --full-bleed-test1: 100cqi;
+    --full-bleed-test2: 100cqi;
+  }
+
+  /* only affects --full-bleed-test2 as it is relative to the nearest container */
+  /* --full-bleed-test1 becomes a resolved/fixed number in .test (due to @property) */
+  .test-random-element {
+    inline-size: 300px;
+    container-type: inline-size;
+  }
+
+  .test1 {
+    inline-size: var(--full-bleed-test1);
+    background: red;
+  }
+
+  .test2 {
+    inline-size: var(--full-bleed-test2);
+    background: red;
+  }
 }
 
 @utility grid-lines-vertical {

@@ -36,4 +36,12 @@
       <p class="text-lg text-brand-complementary-contrast">Normal</p>
     </div>
   </section>
+
+  <div class="test">
+    <div class="test-random-element">
+      <div class="test1">Test1 (eager evaluation)</div>
+      <div class="test2">Test2 (lazy evaluation)</div>
+    </div>
+  </div>
+
 </main>
