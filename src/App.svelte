@@ -37,6 +37,20 @@
     </div>
   </section>
 
+  <section class="grid-container-border-shape">
+    <div class="grid-container-border-shape-row bg-brand-complementary py-normal">
+      <h2 class="text-xl text-brand-complementary-contrast font-bold">
+        Full bleed via border-shape and border-color
+      </h2>
+    </div>
+    <div class="grid-container-border-shape-row-full-bleed border-brand py-normal">
+      <p class="text-lg text-brand-contrast">Full bleed</p>
+    </div>
+    <div class="grid-container-border-shape-row bg-brand-complementary py-normal">
+      <p class="text-lg text-brand-contrast">Normal</p>
+    </div>
+  </section>
+
   <div class="test">
     <div class="test-random-element">
       <div class="test1">Test1 (eager evaluation)</div>

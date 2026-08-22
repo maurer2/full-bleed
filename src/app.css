@@ -93,3 +93,21 @@
   /* 50% of the centre column minus half the container width = negative distance from the column edge back to the container edge */
   margin-inline: calc(50% - 50cqi);
 }
+
+/* https://css-tip.com/breakout-background/ */
+/* border-shape */
+@utility grid-container-border-shape {
+  display: grid;
+  grid-template-columns: var(--spacing-content);
+  justify-content: center;
+  border-color: transparent; /* fallback to avoid text-colour (black) as default border colour */
+}
+
+@utility grid-container-border-shape-row-full-bleed {
+  padding-inline: var(--spacing-normal);
+  border-shape: inset(0 -100vw) circle(0);
+}
+
+@utility grid-container-border-shape-row {
+  padding-inline: var(--spacing-normal);
+}
