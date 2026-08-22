@@ -8,10 +8,7 @@
     "customGroups": [
       {
         "groupName": "svelte",
-        "elementNamePattern": [
-          "svelte",
-          "svelte/*"
-        ]
+        "elementNamePattern": ["svelte", "svelte/*"]
       }
     ],
     "groups": [
@@ -19,21 +16,10 @@
       {
         "newlinesBetween": false
       },
-      [
-        "builtin",
-        "external"
-      ],
-      [
-        "subpath",
-        "internal",
-        "parent"
-      ],
-      [
-        "sibling"
-      ],
-      [
-        "index"
-      ],
+      ["builtin", "external"],
+      ["subpath", "internal", "parent"],
+      ["sibling"],
+      ["index"],
       "unknown"
     ]
   },
@@ -41,13 +27,9 @@
     "sortScripts": true
   },
   "sortTailwindcss": {
-    "stylesheet": "./src/styles.css",
-    "functions": [
-      "clsx"
-    ],
-    "attributes": [
-      "className"
-    ],
+    "stylesheet": "./src/app.css",
+    "functions": ["clsx"],
+    "attributes": ["className"],
     "preserveWhitespace": false
   },
   "ignorePatterns": [
@@ -63,10 +45,7 @@
   // Workaround for the JSON formatting mismatch between the VS Code extension and the npm script: https://github.com/oxc-project/oxc-vscode/issues/140
   "overrides": [
     {
-      "files": [
-        "**/*.json",
-        "**/*.jsonc"
-      ],
+      "files": ["**/*.json", "**/*.jsonc"],
       "options": {
         "trailingComma": "none"
       }
