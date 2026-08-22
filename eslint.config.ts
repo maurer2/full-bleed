@@ -1,13 +1,13 @@
-import js from "@eslint/js";
-import { defineConfig, globalIgnores } from "eslint/config";
-import svelte from "eslint-plugin-svelte";
-import globals from "globals";
-import tseslint from "typescript-eslint";
+import js from '@eslint/js';
+import svelte from 'eslint-plugin-svelte';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-import svelteConfig from "./svelte.config.js";
+import svelteConfig from './svelte.config.js';
 
 export default defineConfig(
-  globalIgnores(["dist/"]),
+  globalIgnores(['dist/']),
   js.configs.recommended,
   tseslint.configs.recommended,
   svelte.configs.recommended,
@@ -18,16 +18,16 @@ export default defineConfig(
       },
     },
     rules: {
-      "no-undef": "off",
+      'no-undef': 'off',
     },
   },
   {
-    files: ["**/*.svelte", "**/*.svelte.ts", "**/*.svelte.js"],
+    files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
     languageOptions: {
       parserOptions: {
         // Let the svelte parser hand <script lang="ts"> blocks to the TS parser.
         parser: tseslint.parser,
-        extraFileExtensions: [".svelte"],
+        extraFileExtensions: ['.svelte'],
         svelteConfig,
       },
     },

@@ -8,32 +8,33 @@
     "#lib/*": "./src/lib/*"
   },
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "check:types": "svelte-check --tsconfig ./tsconfig.app.json && tsgo --noEmit -p tsconfig.node.json",
-    "lint": "eslint .",
+    "check:types": "svelte-check --tsconfig ./tsconfig.app.json && tsc -b tsconfig.node.json --noEmit",
+    "dev": "vite",
     "format": "oxfmt",
-    "format:check": "oxfmt --check"
+    "format:check": "oxfmt --check",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@sveltejs/vite-plugin-svelte": "^7.1.2",
-    "@tailwindcss/vite": "^4.3.2",
-    "@tsconfig/node24": "^24.0.4",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@tsconfig/node24": "^24.0.5",
     "@tsconfig/svelte": "^5.0.8",
-    "@types/node": "^24.13.2",
-    "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "eslint": "^10.7.0",
-    "eslint-plugin-svelte": "^3.20.0",
-    "globals": "^17.7.0",
+    "@types/node": "^24.13.3",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.8.1",
+    "eslint-plugin-svelte": "^3.23.0",
+    "globals": "^17.11.0",
     "jiti": "^2.7.0",
-    "oxfmt": "^0.59.0",
-    "svelte": "^5.56.4",
-    "svelte-check": "^4.7.1",
-    "tailwindcss": "^4.3.2",
-    "typescript": "~6.0.2",
-    "typescript-eslint": "^8.64.0",
-    "vite": "^8.1.1"
-  }
+    "oxfmt": "^0.63.0",
+    "svelte": "^5.56.9",
+    "svelte-check": "^4.7.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "npm:@typescript/typescript6@~6.0.2",
+    "typescript-eslint": "^8.67.0",
+    "vite": "^8.2.1"
+  },
+  "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621"
 }

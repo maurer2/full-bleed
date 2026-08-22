@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @property --full-bleed-test1 {
-  syntax: "<length>";
+  syntax: '<length>';
   initial-value: 0px;
   inherits: true;
 }
