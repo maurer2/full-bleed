@@ -19,3 +19,8 @@ Checking out various approaches for full bleed (subgrid, container query units e
 - https://github.com/maurer2/trickle-down-features/blob/main/src/app.css#L110
 
 ## Negative margins
+
+
+## Border-shape and border-color
+
+- https://css-tip.com/breakout-background/
